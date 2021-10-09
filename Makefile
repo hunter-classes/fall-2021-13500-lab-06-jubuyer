@@ -16,7 +16,7 @@ caeser.o: caeser.cpp caeser.h
 main.o: main.cpp funcs.h
 	g++ -Wall -c main.cpp
 
-tests.o: tests.cpp doctest.h funcs.h
+tests.o: tests.cpp doctest.h caeser.h
 	g++ -std=c++11 -Wall -c tests.cpp
 
 clean:
