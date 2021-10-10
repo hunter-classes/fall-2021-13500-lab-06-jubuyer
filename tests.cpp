@@ -9,4 +9,9 @@ TEST_CASE("Caeser Cipher Theory Tests") {
     CHECK((encryptCaesar("I l!Ke to cOde and s@y lies", 8)) == "Q t!Sm bw kWlm ivl a@g tqma");
     CHECK((encryptCaesar("I don't Know lol", 21)) == "D yji'o Fijr gjg");
   }
+  SUBCASE("Extreme") {
+    CHECK((encryptCaesar(" ", 2)) == " ");
+    CHECK((encryptCaesar("@*&#!@", 2)) == "@*&#!@");
+    CHECK((encryptCaesar("Is this a dream?", 26)) == "Is this a dream?");
+  }
 }
