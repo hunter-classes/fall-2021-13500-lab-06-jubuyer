@@ -1,9 +1,11 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 #include "caeser.h"
+#include "vigenere.h"
+#include "decrypt.h"
 
 // add your tests here
-TEST_CASE("Caeser Cipher Theory Tests") {
+TEST_CASE("Caesar Cipher Theory Tests") {
   SUBCASE("Basic") {
     CHECK((encryptCaesar("Way to Go!",5)) == "Bfd yt Lt!");
     CHECK((encryptCaesar("I l!Ke to cOde and s@y lies", 8)) == "Q t!Sm bw kWlm ivl a@g tqma");
@@ -13,5 +15,32 @@ TEST_CASE("Caeser Cipher Theory Tests") {
     CHECK((encryptCaesar(" ", 2)) == " ");
     CHECK((encryptCaesar("@*&#!@", 2)) == "@*&#!@");
     CHECK((encryptCaesar("Is this a dream?", 26)) == "Is this a dream?");
+  }
+}
+
+TEST_CASE("Decrypt Caesar Cipher Theory Tests") {
+  SUBCASE("Basic") {
+
+  }
+  SUBCASE("Extreme") {
+
+  }
+}
+
+TEST_CASE("Vigenere Cipher Theory Tests") {
+  SUBCASE("Basic") {
+
+  }
+  SUBCASE("Extreme") {
+
+  }
+}
+
+TEST_CASE("Decrypt Vigenere Cipher Theory Tests") {
+  SUBCASE("Basic") {
+
+  }
+  SUBCASE("Extreme") {
+
   }
 }
