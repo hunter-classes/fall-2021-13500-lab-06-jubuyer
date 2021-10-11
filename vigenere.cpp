@@ -6,7 +6,13 @@
 char shiftChar(char c, char key) {
   char output = c;
   int temp = (int)key;
-  int shift = temp - 97;
+  int shift;
+  if(islower(key)) {
+    shift = temp - 97;
+  }
+  if (isupper(key)) {
+    shift = temp - 65;
+  }
 
   if (isalpha(c)) {
     if (isupper(c)) { //Range of A-Z is 65(A) to 90(Z)
