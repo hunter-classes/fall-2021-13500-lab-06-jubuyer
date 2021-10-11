@@ -1,7 +1,9 @@
 #pragma once
 
 //Task D
-char shiftCaesarChar(char c, int rshift);
+char decryptCaesarChar(char c, int rshift);
+
+char decryptVigenereChar(char c, char key);
 
 std::string decryptCaesar(std::string ciphertext, int rshift);
 
