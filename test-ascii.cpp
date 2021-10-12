@@ -27,7 +27,10 @@ std::string convert(std::string str) {
 int main() {
   std::cout << "Test 1" << '\n';
   std::cout << convert("Hello") << '\n';
-  //convert(str);
+  std::cout << "Test 2" << '\n';
+  std::cout << convert("Does it work?") << '\n';
+  std::cout << "Test 3" << '\n';
+  std::cout << convert("it sh0uld") << '\n';
 
   return 0;
 }
