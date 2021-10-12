@@ -25,11 +25,8 @@ std::string convert(std::string str) {
 }
 
 int main() {
-  std::string str;
-  std::cout << "Enter a line of text: ";
-  std::getline(std::cin, str);
-  std::cout << "Input: " << str << '\n';
-  std::cout << convert(str);
+  std::cout << "Test 1" << '\n';
+  std::cout << convert("Hello") << '\n';
   //convert(str);
 
   return 0;
