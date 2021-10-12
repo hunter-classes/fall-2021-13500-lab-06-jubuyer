@@ -34,6 +34,9 @@ TEST_CASE("Decrypt Caesar Cipher Theory Tests") {
 TEST_CASE("Vigenere Cipher Theory Tests") {
   SUBCASE("Basic") {
     CHECK((encryptVigenere("Hello, World!", "cake") == "Jevpq, Wyvnd!"));
+    CHECK((encryptVigenere("i @m test1ng vigenere", "code") == "k @a wiuh1qk xwjipsui"));
+    CHECK((encryptVigenere("coding is not that easy", "python") == "rmwpbt xq gvh gwym lofn"));
+
   }
   SUBCASE("Extreme") {
     CHECK((encryptVigenere("Hello, World!", "CAKE") == "Jevpq, Wyvnd!"));
