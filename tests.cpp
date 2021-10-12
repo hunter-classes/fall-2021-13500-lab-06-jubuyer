@@ -29,10 +29,10 @@ TEST_CASE("Decrypt Caesar Cipher Theory Tests") {
 
 TEST_CASE("Vigenere Cipher Theory Tests") {
   SUBCASE("Basic") {
-
+    CHECK((encryptVigenere("Hello, World!", "cake") == "Jevpq, Wyvnd!"));
   }
   SUBCASE("Extreme") {
-
+    CHECK((encryptVigenere("Hello, World!", "CAKE") == "Jevpq, Wyvnd!"));
   }
 }
 
