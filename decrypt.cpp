@@ -50,6 +50,9 @@ char decryptCaesarChar(char c, int rshift) {
 
 char decryptVigenereChar(char c, char key) {
   char output = c;
+  if (!isalpha(c)) { //return the same character if it is not a letter
+    return output;
+  }
   int temp = (int)key;
   int shift;
   if(islower(key)) {
@@ -58,16 +61,16 @@ char decryptVigenereChar(char c, char key) {
   if (isupper(key)) {
     shift = temp - 65;
   }
-  
+
   if (isalpha(c)) {
     if (isupper(c)) { //Range of A-Z is 65(A) to 90(Z)
-      if ((c+shift) < 65) { //if out of bounds
+      if ((c - shift) < 65) { //if out of bounds
         output = 'A' + (c- shift - 65 + 26);
       } else {
         output = c - shift;
       }
     } else if (islower(c)) { //Range of a-z is 97(a) to 122(z)
-      if ((c + shift) < 97) { //if out of bounds
+      if ((c - shift) < 97) { //if out of bounds
         output = 'a' + (c - shift - 97 + 26);
       } else {
         output = c - shift;
